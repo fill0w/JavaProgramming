@@ -2,10 +2,7 @@ package team.dedica.collections;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -43,5 +40,20 @@ class CollectionsTest {
         assertEquals(true, shoppingSet.contains("Almond"));
         assertEquals(true, shoppingSet.contains("Oats"));
         assertEquals(true, shoppingSet.contains("Honey"));
+    }
+    @Test
+    void hashMapToList() {
+        //arrange
+        Collections collections = new Collections();
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "Apple");
+        map.put(2, "Orange");
+        map.put(3, "Pear");
+        //act
+        List<String> fruits = new ArrayList<String>(map.values());
+        List<Integer> ints = new ArrayList<Integer>(map.keySet());
+        System.out.println(ints);
+        System.out.println(fruits);
+
     }
 }
