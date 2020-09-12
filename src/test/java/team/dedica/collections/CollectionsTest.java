@@ -45,15 +45,15 @@ class CollectionsTest {
     void hashMapToList() {
         //arrange
         Collections collections = new Collections();
-        Map<Integer, String> map = new HashMap<>();
-        map.put(1, "Apple");
-        map.put(2, "Orange");
-        map.put(3, "Pear");
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "Apple");
+        hashMap.put(2, "Orange");
+        hashMap.put(3, "Pear");
         //act
-        List<String> fruits = new ArrayList<String>(map.values());
-        List<Integer> ints = new ArrayList<Integer>(map.keySet());
-        System.out.println(ints);
-        System.out.println(fruits);
 
+        List<String> fruitList = collections.hashMapToList(hashMap);
+        assertEquals("Apple", fruitList.get(0));
+        assertEquals("Orange", fruitList.get(1));
+        assertEquals("Pear", fruitList.get(2));
     }
 }

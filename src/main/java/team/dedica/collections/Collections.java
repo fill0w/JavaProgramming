@@ -17,8 +17,8 @@ public class Collections {
         return targetSet;
     }
 
-    public Map<Integer, String> hashMapToList(Map<Integer, String> map) {
-        Map<Integer, String> targetMap = new HashMap<>(map);
-        return targetMap;
+    public List<String> hashMapToList(Map<Integer, String> map) {
+        List<String> list = new ArrayList<>(map.values());
+        return list;
     }
 }
